@@ -1,0 +1,6 @@
+{
+  "name": "Digital Chukwudi Portfolio",
+  "description": "Premium luxury dark UI portfolio landing page for Digital Chukwudi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
