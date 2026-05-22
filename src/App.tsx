@@ -7,10 +7,10 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { SelectedWork } from './components/SelectedWork';
-import { ContentHub } from './components/ContentHub';
 import { Toolstack } from './components/Toolstack';
 import { About } from './components/About';
 import { Testimonials } from './components/Testimonials';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   return (
@@ -21,10 +21,11 @@ export default function App() {
         <Services />
         <SelectedWork />
         <Testimonials />
-        <ContentHub />
         <Toolstack />
         <About />
       </main>
+      
+      <ScrollToTop />
       
       <footer className="w-full text-center text-xs font-display py-8 bg-[#050505] text-soft-white/30 uppercase tracking-widest border-t border-white/5 relative z-10">
         &copy; {new Date().getFullYear()} Digital Chukwudi. Systems Online. All rights reserved.

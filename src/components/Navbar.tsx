@@ -37,8 +37,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:flex justify-end">
-          <a href="#connect" className="px-5 py-2 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all whitespace-nowrap">
-            Access Terminal
+          <a href="#connect" className="flex items-center justify-center px-6 py-4 bg-brand-orange/10 hover:bg-white text-brand-orange hover:text-black hover:border-white border border-brand-orange/30 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all whitespace-nowrap">
+            Contact Terminal
           </a>
         </div>
 
@@ -70,9 +70,9 @@ export function Navbar() {
              <a 
                href="#connect" 
                onClick={() => setIsOpen(false)}
-               className="mt-2 px-6 py-3 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all"
+               className="mt-2 flex items-center justify-center px-6 py-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all"
              >
-               Access Terminal
+               Contact Terminal
              </a>
           </motion.div>
         )}

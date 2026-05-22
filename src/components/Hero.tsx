@@ -23,7 +23,7 @@ export function Hero() {
       </div>
 
       {/* Main Bottom Content arranged exactly like Screenshot 2 layout */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[15vh] lg:pt-[25vh] pb-8 lg:pb-0">
+      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[10vh] lg:pt-[15vh] pb-12 lg:pb-20">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export function Hero() {
         >
           <a 
             href="#work" 
-            className="group flex items-center justify-center px-8 h-[60px] bg-white text-black rounded-sm font-display text-base uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
+            className="group flex items-center justify-center px-6 h-[50px] bg-white text-black rounded-sm font-display text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
           >
             See My Works
           </a>
