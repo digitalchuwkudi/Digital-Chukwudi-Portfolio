@@ -23,7 +23,7 @@ export function Navbar() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-black/90 backdrop-blur-md border-white/5 py-3' : 'bg-transparent border-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
-        <a href="#" className="flex items-center gap-2 group -my-14 relative z-20 justify-self-start">
+        <a href="#" className="flex items-center gap-2 group -my-14 -ml-6 relative z-20 justify-self-start">
           <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[240px] h-[170px] object-contain" />
         </a>
 
@@ -38,7 +38,7 @@ export function Navbar() {
 
         <div className="hidden md:flex justify-end">
           <a href="#connect" className="flex items-center justify-center px-6 py-4 bg-brand-orange/10 hover:bg-white text-brand-orange hover:text-black hover:border-white border border-brand-orange/30 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all whitespace-nowrap">
-            Contact Terminal
+            Contact
           </a>
         </div>
 
@@ -72,7 +72,7 @@ export function Navbar() {
                onClick={() => setIsOpen(false)}
                className="mt-2 flex items-center justify-center px-6 py-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all"
              >
-               Contact Terminal
+               Contact
              </a>
           </motion.div>
         )}

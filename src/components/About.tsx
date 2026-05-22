@@ -17,12 +17,12 @@ export function About() {
           <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           
           <div className="flex items-center gap-6 mb-8 relative z-10">
-            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-brand-orange p-1">
-              <div className="w-full h-full rounded-full overflow-hidden bg-[#111]">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-brand-orange p-1 group/image">
+              <div className="w-full h-full rounded-full overflow-hidden bg-[#111] transition-transform duration-500 group-hover/image:scale-110">
                  <img 
                     src="https://i.ibb.co/tTBnfdPn/add-a-grayscale-black-grey-202605220221.jpg" 
                     alt="Digital Chukwudi" 
-                    className="w-full h-full object-cover grayscale brightness-110"
+                    className="w-full h-full object-cover grayscale brightness-110 transition-transform duration-700 group-hover/image:scale-125"
                   />
               </div>
             </div>
@@ -59,15 +59,15 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full lg:w-1/2 flex flex-col items-start scroll-mt-24"
+          className="w-full lg:w-1/2 flex flex-col items-center text-center scroll-mt-24"
         >
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand-orange/30 bg-brand-orange/5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shadow-[0_0_8px_#ff5a36]" />
             <span className="text-xs font-display tracking-widest text-brand-orange uppercase">Link Established</span>
           </div>
 
-          <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight mb-6">Initiate Contact Sequence.</h2>
-          <p className="text-soft-white/60 mb-10 text-lg">Integrate a revenue-focused digital framework into your current operations.</p>
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Initiate Contact Sequence.</h2>
+          <p className="text-soft-white/70 leading-relaxed font-light mb-10 max-w-md">Integrate a revenue-focused digital framework into your current operations.</p>
           
           <div className="flex flex-col w-full gap-4">
              <a 

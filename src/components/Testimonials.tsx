@@ -30,10 +30,10 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-16 text-left"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 uppercase">Client Intel</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl mx-auto font-light">Direct feedback from partners utilizing the digital systems.</p>
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">Client Testimonial</h2>
+          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Direct feedback from partners utilizing the digital systems.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">

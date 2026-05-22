@@ -20,13 +20,13 @@ export function Toolstack() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:w-1/3 text-center lg:text-left flex flex-col items-center lg:items-start"
+          className="lg:w-1/3 text-left flex flex-col items-start"
         >
           <div className="p-3 bg-[#111] rounded-lg border border-white/10 mb-4 shadow-[0_0_15px_rgba(255,255,255,0.03)] inline-block">
              <Settings2 className="w-6 h-6 text-soft-white/60" />
           </div>
-          <h2 className="font-display text-3xl font-bold mb-4 uppercase tracking-tight">Active Engine Core</h2>
-          <p className="text-soft-white/60 font-light">The enterprise-grade intelligence engines powering my workflows and client solutions.</p>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-tight">Active Engine Core</h2>
+          <p className="text-soft-white/60 font-light max-w-sm">The enterprise-grade intelligence engines powering my workflows and client solutions.</p>
         </motion.div>
 
         <div className="lg:w-2/3 flex flex-wrap justify-center lg:justify-end gap-6 sm:gap-8">

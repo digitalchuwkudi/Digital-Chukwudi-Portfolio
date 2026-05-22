@@ -49,10 +49,10 @@ export function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center lg:text-left"
+          className="mb-16 text-left"
         >
-          <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl mx-auto lg:mx-0">A showcase of high-end business platforms focused on growth and conversion.</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
+          <p className="text-soft-white/60 text-lg max-w-2xl lg:mx-0">A showcase of high-end business platforms focused on growth and conversion.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -67,7 +67,7 @@ export function SelectedWork() {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-brand-orange/10 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
-              <div className="relative z-10 flex flex-col h-full">
+              <div className="relative z-10 flex flex-col h-full items-center text-center">
                 {/* Heading on Top */}
                 <h3 className="font-display text-2xl font-bold mb-2">{project.title}</h3>
                 <p className="text-soft-white/40 font-mono text-xs uppercase tracking-widest mb-6">{project.role}</p>

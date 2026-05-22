@@ -35,10 +35,10 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-16 text-left"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 uppercase">Services</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl mx-auto font-light">Comprehensive digital architecture services engineered to build, scale, and automate your revenue streams.</p>
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">Services</h2>
+          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Comprehensive digital architecture services engineered to build, scale, and automate your revenue streams.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
@@ -49,7 +49,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group flex flex-col"
+              className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group flex flex-col items-center text-center"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               

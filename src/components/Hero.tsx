@@ -23,7 +23,7 @@ export function Hero() {
       </div>
 
       {/* Main Bottom Content arranged exactly like Screenshot 2 layout */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[10vh] lg:pt-[15vh] pb-12 lg:pb-20">
+      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[5vh] lg:pt-[10vh] pb-16 lg:pb-24">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
