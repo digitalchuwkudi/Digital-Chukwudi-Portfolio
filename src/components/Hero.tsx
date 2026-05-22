@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pt-32 pb-6 lg:pb-10 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative min-h-[120vh] flex flex-col justify-end pt-40 pb-6 lg:pb-10 px-6 sm:px-12 lg:px-24 overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#0B0B0D]">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-transparent to-transparent z-20" />

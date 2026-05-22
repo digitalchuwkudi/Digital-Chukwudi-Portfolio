@@ -14,32 +14,36 @@ export function Navbar() {
 
   const links = [
     { name: 'Home', href: '#' },
-    { name: 'Architecture', href: '#work' },
+    { name: 'Services', href: '#services' },
+    { name: 'Work', href: '#work' },
+    { name: 'About', href: '#about' },
     { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Core', href: '#connect' },
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-4'}`}>
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group -my-14 relative z-20">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-black/90 backdrop-blur-md border-white/5 py-3' : 'bg-transparent border-transparent py-4'}`}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
+        <a href="#" className="flex items-center gap-2 group -my-14 relative z-20 justify-self-start">
           <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[240px] h-[170px] object-contain" />
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center justify-center gap-8 w-full">
           {links.map((link) => (
-            <a key={link.name} href={link.href} className="text-xs font-display uppercase tracking-widest font-semibold text-soft-white/60 hover:text-white hover:text-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all">
+            <a key={link.name} href={link.href} className="text-xs font-display uppercase tracking-widest font-semibold text-soft-white/60 hover:text-white hover:text-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all whitespace-nowrap">
               {link.name}
             </a>
           ))}
-          <a href="#connect" className="px-5 py-2 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all">
-            Access Terminal
-          </a>
         </nav>
 
+        <div className="hidden md:flex justify-end">
+          <a href="#connect" className="px-5 py-2 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all whitespace-nowrap">
+            Access Terminal
+          </a>
+        </div>
+
         {/* Mobile Toggle */}
-        <button className="md:hidden text-white hover:text-brand-orange transition-colors" onClick={() => setIsOpen(!isOpen)}>
+        <button className="md:hidden justify-self-end text-white hover:text-brand-orange transition-colors" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>

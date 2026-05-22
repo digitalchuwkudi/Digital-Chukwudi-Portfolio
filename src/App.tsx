@@ -5,6 +5,7 @@
 
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { Services } from './components/Services';
 import { SelectedWork } from './components/SelectedWork';
 import { ContentHub } from './components/ContentHub';
 import { Toolstack } from './components/Toolstack';
@@ -17,6 +18,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Services />
         <SelectedWork />
         <Testimonials />
         <ContentHub />

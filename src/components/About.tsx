@@ -3,7 +3,7 @@ import { Mail, MessageCircle, Calendar, ExternalLink } from 'lucide-react';
 
 export function About() {
   return (
-    <section className="py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="connect">
+    <section className="py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="about">
        <div className="absolute right-0 bottom-0 w-3/4 h-3/4 bg-brand-orange/5 rounded-full blur-[150px] pointer-events-none" />
        
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
@@ -54,11 +54,12 @@ export function About() {
         </motion.div>
 
         <motion.div 
+          id="connect"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full lg:w-1/2 flex flex-col items-start"
+          className="w-full lg:w-1/2 flex flex-col items-start scroll-mt-24"
         >
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand-orange/30 bg-brand-orange/5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shadow-[0_0_8px_#ff5a36]" />
