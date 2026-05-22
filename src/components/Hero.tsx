@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end pt-32 pb-16 lg:pb-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-end pt-32 pb-6 lg:pb-10 px-6 sm:px-12 lg:px-24 overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#0B0B0D]">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-transparent to-transparent z-20" />
@@ -17,24 +17,19 @@ export function Hero() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover grayscale-[0.2] transform-gpu will-change-transform"
+          className="w-full h-full object-cover object-[center_30%] grayscale-[0.2] transform-gpu will-change-transform"
           src="https://res.cloudinary.com/dx41voszq/video/upload/q_auto,f_auto/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
         />
       </div>
 
       {/* Main Bottom Content arranged exactly like Screenshot 2 layout */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[40vh] lg:pt-80">
+      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[15vh] lg:pt-[25vh] pb-8 lg:pb-0">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-start gap-4 lg:gap-6 w-full lg:max-w-3xl"
         >
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-brand-orange/30 bg-black/50 backdrop-blur-md shadow-[0_0_15px_rgba(255,0,0,0.15)]">
-            <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse shadow-[0_0_8px_#ff0000]" />
-            <span className="text-sm font-medium tracking-wide text-brand-orange uppercase font-display text-xs">System Online</span>
-          </div>
-          
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
             Architecting Growth with AI-Powered Systems.
           </h1>
@@ -52,9 +47,9 @@ export function Hero() {
         >
           <a 
             href="#work" 
-            className="group flex items-center justify-center px-8 h-[60px] bg-white text-black rounded-sm font-display text-base uppercase tracking-widest font-bold transition-all hover:bg-soft-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
+            className="group flex items-center justify-center px-8 h-[60px] bg-white text-black rounded-sm font-display text-base uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
           >
-            See My Work
+            See My Works
           </a>
         </motion.div>
       </div>

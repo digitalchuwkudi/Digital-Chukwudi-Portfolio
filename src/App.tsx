@@ -9,6 +9,7 @@ import { SelectedWork } from './components/SelectedWork';
 import { ContentHub } from './components/ContentHub';
 import { Toolstack } from './components/Toolstack';
 import { About } from './components/About';
+import { Testimonials } from './components/Testimonials';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <main>
         <Hero />
         <SelectedWork />
+        <Testimonials />
         <ContentHub />
         <Toolstack />
         <About />

@@ -15,14 +15,15 @@ export function Navbar() {
   const links = [
     { name: 'Home', href: '#' },
     { name: 'Architecture', href: '#work' },
+    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Core', href: '#connect' },
   ];
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group -my-10 relative z-20">
-          <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[180px] h-[130px] object-contain" />
+        <a href="#" className="flex items-center gap-2 group -my-14 relative z-20">
+          <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[240px] h-[170px] object-contain" />
         </a>
 
         {/* Desktop Nav */}
@@ -32,7 +33,7 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <a href="#connect" className="px-5 py-2 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-brand-orange/20 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,90,54,0.3)] text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all">
+          <a href="#connect" className="px-5 py-2 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all">
             Access Terminal
           </a>
         </nav>
@@ -65,7 +66,7 @@ export function Navbar() {
              <a 
                href="#connect" 
                onClick={() => setIsOpen(false)}
-               className="mt-2 px-6 py-3 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-xs font-display uppercase tracking-widest font-bold rounded-sm"
+               className="mt-2 px-6 py-3 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white text-xs font-display uppercase tracking-widest font-bold rounded-sm transition-all"
              >
                Access Terminal
              </a>
