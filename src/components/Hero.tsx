@@ -18,7 +18,7 @@ export function Hero() {
           playsInline
           preload="auto"
           className="w-full h-full object-cover grayscale-[0.2] transform-gpu will-change-transform"
-          src="https://res.cloudinary.com/dx41voszq/video/upload/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
+          src="https://res.cloudinary.com/dx41voszq/video/upload/q_auto,f_auto/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
         />
       </div>
 
