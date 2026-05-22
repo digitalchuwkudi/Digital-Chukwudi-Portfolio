@@ -20,7 +20,7 @@ export function About() {
             <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-brand-orange p-1">
               <div className="w-full h-full rounded-full overflow-hidden bg-[#111]">
                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
+                    src="https://i.ibb.co/tTBnfdPn/add-a-grayscale-black-grey-202605220221.jpg" 
                     alt="Digital Chukwudi" 
                     className="w-full h-full object-cover grayscale brightness-110"
                   />

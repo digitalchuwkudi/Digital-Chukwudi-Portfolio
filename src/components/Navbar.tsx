@@ -13,6 +13,7 @@ export function Navbar() {
   }, []);
 
   const links = [
+    { name: 'Home', href: '#' },
     { name: 'Architecture', href: '#work' },
     { name: 'Core', href: '#connect' },
   ];
