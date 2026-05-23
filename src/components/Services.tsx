@@ -5,27 +5,27 @@ const services = [
   {
     title: "AI Website Design & Development",
     description: "Modern conversion-focused websites designed to help businesses attract customers, improve credibility, and generate more leads online.",
-    icon: <MonitorSmartphone className="w-8 h-8 text-brand-orange" />
+    icon: <MonitorSmartphone className="w-10 h-10 text-brand-orange" />
   },
   {
-    title: "AI Chat Agents",
+    title: "AI Receptionist Agents",
     description: "AI-powered website assistants that engage visitors, answer questions instantly, capture leads, and help convert traffic into paying customers.",
-    icon: <MessageSquare className="w-8 h-8 text-brand-orange" />
+    icon: <MessageSquare className="w-10 h-10 text-brand-orange" />
   },
   {
     title: "AI Video Creation",
     description: "Cinematic AI-generated videos and visual content designed to help brands capture attention, increase engagement, and stand out online.",
-    icon: <Film className="w-8 h-8 text-brand-orange" />
+    icon: <Film className="w-10 h-10 text-brand-orange" />
   },
   {
     title: "Paid Ads",
     description: "Google, Facebook, Instagram, and TikTok ad systems built to drive targeted traffic, generate leads, and increase sales.",
-    icon: <TrendingUp className="w-8 h-8 text-brand-orange" />
+    icon: <TrendingUp className="w-10 h-10 text-brand-orange" />
   },
   {
     title: "Sales Funnels & Digital Sales Systems",
     description: "Landing pages, lead funnels, digital products, and course systems designed to turn audience attention into scalable revenue.",
-    icon: <LayoutTemplate className="w-8 h-8 text-brand-orange" />
+    icon: <LayoutTemplate className="w-10 h-10 text-brand-orange" />
   }
 ];
 
@@ -58,7 +58,7 @@ export function Services() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               
-              <div className="mb-6 w-16 h-16 rounded-xl bg-[#111114] border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+              <div className="mb-6 group-hover:scale-110 transition-transform duration-500">
                 {service.icon}
               </div>
               

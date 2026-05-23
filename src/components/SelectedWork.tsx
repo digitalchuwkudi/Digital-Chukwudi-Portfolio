@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, Code, CheckCircle2 } from 'lucide-react';
+import ReactPlayer from 'react-player';
 
 const projects = [
   {
@@ -8,7 +10,7 @@ const projects = [
     role: "Dental Growth Platform",
     whatIDid: [
       "Website Design & Development",
-      "AI Chat Integration",
+      "AI Receptionist Integration",
       "Appointment Booking System",
       "Conversion Optimization",
       "Patient Lead Flow"
@@ -37,7 +39,7 @@ const projects = [
     description: "AI-powered lead generation platform designed to help dental practices capture, qualify, and convert new patient inquiries automatically.",
     role: "AI Lead Conversion System",
     whatIDid: [
-      "AI Chat Agent",
+      "AI Receptionist Agent",
       "Lead Automation",
       "Landing Page Design",
       "Patient Qualification System",
@@ -49,8 +51,8 @@ const projects = [
   },
   {
     title: "Kroxx Global Concept",
-    description: "Modern business platform designed for a premium phone and laptop gadgets brand offering device sales, repairs, diagnostics, upgrades, and accessories in Abuja.",
-    role: "Phone, Laptop Gadgets & Repair Platform",
+    description: "Modern business platform designed for a phone and laptop gadgets brand offering device sales, repairs, upgrades, and accessories",
+    role: "Customer Service & Booking Platform",
     whatIDid: [
       "Website Design & Development",
       "Service-Focused User Experience",
@@ -59,13 +61,45 @@ const projects = [
       "Booking & Inquiry Flow",
       "Brand Experience Design"
     ],
-    resultText: "Built to help customers easily explore phone and laptop gadgets, request repairs, book premium services, and connect with the business faster online.",
+    resultText: "Helped customers inquire about phone and laptop, gadgets, request repairs, book services, and connect with the business faster online.",
     mockup: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
     caseStudyLink: "https://kroxxglobalconcept.pages.dev"
+  },
+  {
+    title: "Cinematic AI Visual Experience",
+    description: "High-end AI-generated cinematic visuals designed to capture attention, strengthen brand storytelling, and create immersive digital experiences for modern businesses and creators.",
+    role: "AI Cinematic Video Creation",
+    whatIDid: [
+      "AI Video Creation",
+      "Cinematic Scene Design",
+      "Motion Direction",
+      "Visual Storytelling",
+      "AI-Assisted Production"
+    ],
+    resultText: "Created a visually immersive AI-powered cinematic experience designed to increase engagement and elevate premium brand perception online.",
+    videoUrl: "https://www.youtube.com/watch?v=NW9a-Z8w4vs",
+    caseStudyLink: "https://www.youtube.com/watch?v=NW9a-Z8w4vs"
+  },
+  {
+    title: "Kroxx Global Concept AI Commercial",
+    description: "AI-generated promotional advertisement created to help Kroxx Global showcase its phone and laptop gadgets, repair services, and premium customer experience through cinematic visual storytelling.",
+    role: "AI Advertisement Campaign",
+    whatIDid: [
+      "AI Video Creation",
+      "Advertisement Concept Design",
+      "Cinematic Product Visuals",
+      "Motion Editing",
+      "Brand-Focused Storytelling"
+    ],
+    resultText: "Produced a modern AI-powered commercial designed to attract attention, strengthen brand identity, and improve customer engagement online.",
+    videoUrl: "https://youtube.com/shorts/6VKfMY08fTU",
+    caseStudyLink: "https://youtube.com/shorts/6VKfMY08fTU"
   }
 ];
 
 export function SelectedWork() {
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
   return (
     <section id="work" className="py-24 px-6 sm:px-12 lg:px-24 border-y border-white/5 bg-gradient-to-b from-black to-[#0B0B0D]">
       <div className="max-w-7xl mx-auto">
@@ -80,7 +114,7 @@ export function SelectedWork() {
           <p className="text-soft-white/60 text-lg max-w-2xl lg:mx-0">A collection of AI-powered websites and digital systems designed to help businesses grow, convert, and scale online.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -99,8 +133,27 @@ export function SelectedWork() {
 
                 {/* Mockup Container */}
                 <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-black border border-white/5 mb-6 relative shadow-lg group-hover:border-brand-orange/30 transition-colors">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111114] to-transparent opacity-50 z-10" />
-                  <img src={project.mockup} alt={project.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111114] to-transparent opacity-50 z-10 pointer-events-none" />
+                  {project.videoUrl ? (
+                    <div className="w-full h-full relative z-20">
+                      <ReactPlayer
+                        url={project.videoUrl}
+                        width="100%"
+                        height="100%"
+                        playing={playingIndex === index}
+                        controls
+                        onPlay={() => setPlayingIndex(index)}
+                        style={{ position: 'absolute', top: 0, left: 0 }}
+                        config={{
+                          youtube: {
+                            playerVars: { modestbranding: 1, rel: 0 }
+                          }
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <img src={project.mockup} alt={project.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105" />
+                  )}
                 </div>
 
                 {/* Description below */}
@@ -139,11 +192,11 @@ export function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-brand-orange/30 hover:shadow-[0_0_20px_rgba(255,90,54,0.1)] transition-all"
+          className="mt-8 relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-brand-orange/30 hover:shadow-[0_0_20px_rgba(255,90,54,0.1)] transition-all"
         >
-          <div className="flex items-center gap-6">
-            <div className="w-16 h-16 rounded-xl bg-[#111114] border border-white/10 flex items-center justify-center shrink-0">
-               <Github className="w-8 h-8 text-soft-white/80" />
+          <div className="flex flex-col items-start gap-4">
+            <div className="p-3 bg-[#111] rounded-lg border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.03)] inline-block">
+               <Github className="w-6 h-6 text-soft-white/60" />
             </div>
             <div>
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-2">Open Source Lab</h3>
@@ -155,7 +208,7 @@ export function SelectedWork() {
             href="https://github.com/digitalchuwkudi" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap"
+            className="flex items-center justify-center sm:justify-start gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
           >
             <Code className="w-4 h-4" />
             Explore Projects

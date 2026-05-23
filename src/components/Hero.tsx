@@ -35,7 +35,7 @@ export function Hero() {
           </h1>
           
           <p className="text-lg sm:text-xl text-soft-white/90 font-light leading-relaxed max-w-2xl drop-shadow-sm">
-            From AI websites and chat agents to cinematic AI videos, paid ads, and digital sales systems - I help turn attention into leads and sales.
+            From AI websites and AI receptionist agents to cinematic AI videos, paid ads, and digital sales systems - I help turn attention into leads and sales.
           </p>
         </motion.div>
 

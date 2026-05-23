@@ -5,17 +5,17 @@ const steps = [
   {
     title: "Attract",
     description: "AI videos, paid ads, and modern websites designed to help brands stand out and capture attention online.",
-    icon: <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center border border-white/5 shadow-inner mb-6 mx-auto"><Magnet className="w-10 h-10 text-brand-orange" /></div>
+    icon: <Magnet className="w-10 h-10 text-brand-orange mb-6" />
   },
   {
     title: "Engage",
-    description: "AI chat agents and intelligent user experiences that keep visitors engaged, informed, and connected to your business.",
-    icon: <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center border border-white/5 shadow-inner mb-6 mx-auto"><Users className="w-10 h-10 text-brand-orange" /></div>
+    description: "AI receptionist agents and intelligent user experiences that keep visitors engaged, informed, and connected to your business.",
+    icon: <Users className="w-10 h-10 text-brand-orange mb-6" />
   },
   {
     title: "Convert",
     description: "Funnels, booking systems, and automated digital workflows designed to turn visitors into paying customers.",
-    icon: <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center border border-white/5 shadow-inner mb-6 mx-auto"><RefreshCcw className="w-10 h-10 text-brand-orange" /></div>
+    icon: <RefreshCcw className="w-10 h-10 text-brand-orange mb-6" />
   }
 ];
 

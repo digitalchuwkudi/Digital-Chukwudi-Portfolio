@@ -34,13 +34,13 @@ export function About() {
           
           <div className="space-y-4 text-soft-white/70 text-base leading-relaxed mb-8 relative z-10 font-light">
             <p>
-              I help businesses grow through AI-powered websites, intelligent automation, AI chat agents, cinematic AI content, digital sales systems and all round modern content experiences.
+              I help businesses grow through AI-powered websites, intelligent automation, AI receptionist agents, cinematic AI content, digital sales systems and all round modern content experiences.
             </p>
             <p>
               Today, businesses need more than just a good-looking website — they need systems that attract attention, engage visitors, and convert traffic into paying customers.
             </p>
             <p>
-              From high-converting websites and AI-powered chat experiences to paid ads and digital funnels, I build digital growth systems designed for modern businesses that want to scale online.
+              From high-converting websites and AI-powered receptionist experiences to paid ads and digital funnels, I build digital growth systems designed for modern businesses that want to scale online.
             </p>
           </div>
 
@@ -74,11 +74,11 @@ export function About() {
           </div>
 
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Let’s Build a Digital System That Grows Your Business.</h2>
-          <p className="text-soft-white/70 leading-relaxed font-light mb-10 max-w-md">Whether you need a high-converting website, AI chat agent, paid ads, AI video content, or a complete digital sales system — I can help you build a smarter online presence.</p>
+          <p className="text-soft-white/70 leading-relaxed font-light mb-10 max-w-md">Whether you need a high-converting website, AI receptionist agent, paid ads, AI video content, or a complete digital sales system — I can help you build a smarter online presence.</p>
           
           <div className="flex flex-col w-full gap-4">
              <a 
-              href="mailto:hello@example.com" 
+              href="mailto:digitalchukwudi@gmail.com" 
               className="flex items-center justify-between w-full px-6 py-4 bg-[#111114] border border-white/10 hover:border-brand-orange hover:bg-brand-orange/5 rounded-xl transition-all group"
             >
               <div className="flex items-center gap-4">
@@ -102,7 +102,7 @@ export function About() {
             </a>
 
             <a 
-              href="https://wa.me/1234567890" 
+              href="https://wa.me/2290192206612" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between w-full px-6 py-4 bg-[#111114] border border-white/10 hover:border-[#25D366] hover:bg-[#25D366]/5 rounded-xl transition-all group"
