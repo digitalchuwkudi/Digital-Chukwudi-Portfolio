@@ -44,9 +44,12 @@ export function HowIHelp() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative rounded-xl bg-[#111114] border border-white/10 p-10 hover:border-brand-orange/40 transition-all duration-500 hover:-translate-y-2 group text-center flex flex-col items-center"
+              className="relative overflow-hidden rounded-xl bg-[#111114] border border-white/10 p-10 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group text-center flex flex-col items-center"
             >
-              {step.icon}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <div className="group-hover:scale-110 transition-transform duration-500">
+                {step.icon}
+              </div>
               <h3 className="font-display text-2xl font-bold mb-4">{step.title}</h3>
               <p className="text-soft-white/70 leading-relaxed font-light">{step.description}</p>
             </motion.div>

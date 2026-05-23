@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 import { ExternalLink, Github, Code, CheckCircle2 } from 'lucide-react';
 import ReactPlayer from 'react-player';
@@ -61,12 +60,12 @@ const projects = [
       "Booking & Inquiry Flow",
       "Brand Experience Design"
     ],
-    resultText: "Helped customers inquire about phone and laptop, gadgets, request repairs, book services, and connect with the business faster online.",
+    resultText: "Helped customers inquire about phone and laptop, gadgets, request repairs, book services, and connect with the business faster",
     mockup: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
     caseStudyLink: "https://kroxxglobalconcept.pages.dev"
   },
   {
-    title: "Cinematic AI Visual Experience",
+    title: "Cinematic AI Visuals",
     description: "High-end AI-generated cinematic visuals designed to capture attention, strengthen brand storytelling, and create immersive digital experiences for modern businesses and creators.",
     role: "AI Cinematic Video Creation",
     whatIDid: [
@@ -81,7 +80,7 @@ const projects = [
     caseStudyLink: "https://www.youtube.com/watch?v=NW9a-Z8w4vs"
   },
   {
-    title: "Kroxx Global Concept AI Commercial",
+    title: "AI Commercial Video",
     description: "AI-generated promotional advertisement created to help Kroxx Global showcase its phone and laptop gadgets, repair services, and premium customer experience through cinematic visual storytelling.",
     role: "AI Advertisement Campaign",
     whatIDid: [
@@ -98,8 +97,6 @@ const projects = [
 ];
 
 export function SelectedWork() {
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
-
   return (
     <section id="work" className="py-24 px-6 sm:px-12 lg:px-24 border-y border-white/5 bg-gradient-to-b from-black to-[#0B0B0D]">
       <div className="max-w-7xl mx-auto">
@@ -140,15 +137,10 @@ export function SelectedWork() {
                         url={project.videoUrl}
                         width="100%"
                         height="100%"
-                        playing={playingIndex === index}
-                        controls
-                        onPlay={() => setPlayingIndex(index)}
+                        light={true}
+                        controls={true}
+                        playing={true}
                         style={{ position: 'absolute', top: 0, left: 0 }}
-                        config={{
-                          youtube: {
-                            playerVars: { modestbranding: 1, rel: 0 }
-                          }
-                        }}
                       />
                     </div>
                   ) : (
