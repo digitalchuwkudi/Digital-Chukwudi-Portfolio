@@ -1,26 +1,31 @@
 import { motion } from 'motion/react';
-import { MonitorSmartphone, Edit3, TrendingUp, Presentation } from 'lucide-react';
+import { MonitorSmartphone, LayoutTemplate, MessageSquare, Film, TrendingUp } from 'lucide-react';
 
 const services = [
   {
-    title: "AI Website Design/ Development",
-    description: "Intelligent, high-converting digital storefronts built with modern architectures and responsive design systems.",
+    title: "AI Website Design & Development",
+    description: "Modern conversion-focused websites designed to help businesses attract customers, improve credibility, and generate more leads online.",
     icon: <MonitorSmartphone className="w-8 h-8 text-brand-orange" />
   },
   {
-    title: "AI Content Creation",
-    description: "Generative AI strategies applied to produce compelling, on-brand copy, media, and engaging visual assets at scale.",
-    icon: <Edit3 className="w-8 h-8 text-brand-orange" />
+    title: "AI Chat Agents",
+    description: "AI-powered website assistants that engage visitors, answer questions instantly, capture leads, and help convert traffic into paying customers.",
+    icon: <MessageSquare className="w-8 h-8 text-brand-orange" />
   },
   {
-    title: "Paid Ads (Facebook, Instagram, Google, TikTok)",
-    description: "Data-driven advertising campaigns precisely targeted to maximize ROI and rapidly scale your revenue pipelines.",
+    title: "AI Video Creation",
+    description: "Cinematic AI-generated videos and visual content designed to help brands capture attention, increase engagement, and stand out online.",
+    icon: <Film className="w-8 h-8 text-brand-orange" />
+  },
+  {
+    title: "Paid Ads",
+    description: "Google, Facebook, Instagram, and TikTok ad systems built to drive targeted traffic, generate leads, and increase sales.",
     icon: <TrendingUp className="w-8 h-8 text-brand-orange" />
   },
   {
-    title: "Digital Sales/ Course Creation",
-    description: "End-to-end setups for digital product funnels and course platforms optimized for seamless user acquisition and learning.",
-    icon: <Presentation className="w-8 h-8 text-brand-orange" />
+    title: "Sales Funnels & Digital Sales Systems",
+    description: "Landing pages, lead funnels, digital products, and course systems designed to turn audience attention into scalable revenue.",
+    icon: <LayoutTemplate className="w-8 h-8 text-brand-orange" />
   }
 ];
 
@@ -38,10 +43,10 @@ export function Services() {
           className="mb-16 text-left"
         >
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">Services</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Comprehensive digital architecture services engineered to build, scale, and automate your revenue streams.</p>
+          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Modern digital systems designed to help businesses attract attention, convert visitors, and scale revenue online.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+        <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -49,7 +54,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group flex flex-col items-center text-center"
+              className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group flex flex-col items-center text-center w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               

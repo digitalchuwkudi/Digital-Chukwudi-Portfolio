@@ -31,11 +31,11 @@ export function Hero() {
           className="flex flex-col items-start gap-4 lg:gap-6 w-full lg:max-w-3xl"
         >
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
-            Architecting Growth with AI-Powered Systems.
+            AI-Powered Websites & Digital Systems That Convert Visitors Into Clients.
           </h1>
           
           <p className="text-lg sm:text-xl text-soft-white/90 font-light leading-relaxed max-w-2xl drop-shadow-sm">
-            Premium design meets intelligent automation. I craft high-converting digital experiences tailored for scale.
+            From AI websites and chat agents to cinematic AI videos, paid ads, and digital sales systems - I help turn attention into leads and sales.
           </p>
         </motion.div>
 
@@ -47,9 +47,10 @@ export function Hero() {
         >
           <a 
             href="#work" 
-            className="group flex items-center justify-center px-6 h-[50px] bg-white text-black rounded-sm font-display text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
+            className="group flex items-center justify-center gap-2 px-6 h-[50px] bg-white text-black rounded-sm font-display text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
           >
-            See My Works
+            <ArrowRight className="w-4 h-4" />
+            View My Work
           </a>
         </motion.div>
       </div>

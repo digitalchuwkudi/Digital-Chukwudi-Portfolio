@@ -6,7 +6,8 @@ const tools = [
   { name: "Antigravity", initial: "A", color: "from-purple-500/80 to-purple-600/20" },
   { name: "Claude", initial: "C", color: "from-orange-400/80 to-orange-600/20" },
   { name: "ChatGPT", initial: "O", color: "from-emerald-500/80 to-emerald-600/20" },
-  { name: "Veo3", initial: "V", color: "from-cyan-400/80 to-cyan-600/20" }
+  { name: "Veo3", initial: "V", color: "from-cyan-400/80 to-cyan-600/20" },
+  { name: "Seedance", initial: "S", color: "from-pink-500/80 to-pink-600/20" }
 ];
 
 export function Toolstack() {
@@ -25,8 +26,8 @@ export function Toolstack() {
           <div className="p-3 bg-[#111] rounded-lg border border-white/10 mb-4 shadow-[0_0_15px_rgba(255,255,255,0.03)] inline-block">
              <Settings2 className="w-6 h-6 text-soft-white/60" />
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-tight">Active Engine Core</h2>
-          <p className="text-soft-white/60 font-light max-w-sm">The enterprise-grade intelligence engines powering my workflows and client solutions.</p>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-tight">Tools & Platforms</h2>
+          <p className="text-soft-white/60 font-light max-w-sm">AI and creative tools powering modern digital experiences, automation systems, and growth-focused workflows.</p>
         </motion.div>
 
         <div className="lg:w-2/3 flex flex-wrap justify-center lg:justify-end gap-6 sm:gap-8">

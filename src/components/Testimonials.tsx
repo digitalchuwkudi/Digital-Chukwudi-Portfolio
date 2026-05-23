@@ -3,19 +3,19 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Digital Chukwudi transformed our patient acquisition. The AI-driven booking system alone increased our lead conversion by 40%.",
+    quote: "Digital Chukwudi transformed our patient acquisition process. The AI-powered booking and engagement system significantly improved our lead conversion.",
     author: "Dr. Sarah Jenkins",
     role: "Founder, Verve Dental"
   },
   {
-    quote: "Exceptional digital architecture. The systems built for our logistics scaling handled thousands of global shipments without a hitch.",
-    author: "Marcus T.",
-    role: "Operations Director, Kroxx Global"
+    quote: "The website completely upgraded how customers interact with our business online. From gadget inquiries to repair bookings, everything now feels more professional and easier for customers to navigate.",
+    author: "Ikechukwu Madudim.",
+    role: "Founder, Kroxx Global Concept"
   },
   {
-    quote: "They don't just build websites; they build growth engines. The Lash & Brows platform is a masterpiece of luxury and functionality.",
-    author: "Elena R.",
-    role: "CEO, Lash & Brows"
+    quote: "The Lash & Brows platform elevated our brand experience and created a much smoother booking process for our clients.",
+    author: "Josella.",
+    role: "CEO, Lash & Brows Near You"
   }
 ];
 
@@ -33,7 +33,7 @@ export function Testimonials() {
           className="mb-16 text-left"
         >
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">Client Testimonial</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Direct feedback from partners utilizing the digital systems.</p>
+          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Real feedback from businesses using my AI-powered digital systems.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">

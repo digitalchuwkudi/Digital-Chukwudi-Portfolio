@@ -1,42 +1,67 @@
 import { motion } from 'motion/react';
-import { ExternalLink, Github, Code, Cpu } from 'lucide-react';
+import { ExternalLink, Github, Code, CheckCircle2 } from 'lucide-react';
 
 const projects = [
   {
     title: "Verve Dental",
-    description: "A premium digital storefront designed to attract and onboard high-value dental patients. Integrated automated booking and sleek architectural layout.",
-    role: "Full-Stack Development",
-    mockup: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop"
+    description: "Designed to help dental clinics attract new patients, simplify appointment bookings, and improve patient conversion through a modern digital experience.",
+    role: "Dental Growth Platform",
+    whatIDid: [
+      "Website Design & Development",
+      "AI Chat Integration",
+      "Appointment Booking System",
+      "Conversion Optimization",
+      "Patient Lead Flow"
+    ],
+    resultText: "Built to improve patient inquiries, automate engagement, and increase appointment conversions.",
+    mockup: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
+    caseStudyLink: "https://vervedental.pages.dev"
   },
   {
-    title: "Lash & Brows",
-    description: "Elegant booking platform reducing friction for beauty clients. Features a luxurious UI and seamlessly integrated CRM systems.",
-    role: "Growth Design & Web Development",
-    mockup: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=600&auto=format&fit=crop"
+    title: "Lash & Brows Near You",
+    description: "Luxury beauty platform designed to help beauty businesses increase bookings, improve customer experience, and elevate brand perception online.",
+    role: "Beauty Booking Platform",
+    whatIDid: [
+      "Website Design",
+      "Booking Integration",
+      "Mobile Optimization",
+      "CRM Integration",
+      "Brand Experience Design"
+    ],
+    resultText: "Created a smoother customer journey that helps convert visitors into booked beauty appointments.",
+    mockup: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=600&auto=format&fit=crop",
+    caseStudyLink: "https://lash-and-brows-near-you.pages.dev"
   },
   {
     title: "Dentist Leads",
-    description: "Automated pipeline for dental practices to capture, qualify, and convert new patient prospects via AI-driven engagement flows.",
-    role: "AI Lead Automation",
-    mockup: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+    description: "AI-powered lead generation platform designed to help dental practices capture, qualify, and convert new patient inquiries automatically.",
+    role: "AI Lead Conversion System",
+    whatIDid: [
+      "AI Chat Agent",
+      "Lead Automation",
+      "Landing Page Design",
+      "Patient Qualification System",
+      "Conversion Funnel"
+    ],
+    resultText: "Built to automate patient engagement and help clinics convert more website visitors into qualified leads.",
+    mockup: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+    caseStudyLink: "https://dentistleads.pages.dev"
   },
   {
-    title: "Kroxx Global",
-    description: "Enterprise-grade digital infrastructure. A robust system designed to scale global shipments and logistics operations efficiently.",
-    role: "System Architecture",
-    mockup: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    title: "Aura Aesthetics",
-    description: "Digital presence optimization for a luxury clinic, enhancing both patient acquisition and brand positioning through refined visual design.",
-    role: "Digital Design & AI Strategy",
-    mockup: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    title: "Nexus Capital",
-    description: "Secure and visually impactful investor portal designed to articulate high-level financial models and facilitate intuitive data flow.",
-    role: "Frontend Architecture",
-    mockup: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+    title: "Kroxx Global Concept",
+    description: "Modern business platform designed for a premium phone and laptop gadgets brand offering device sales, repairs, diagnostics, upgrades, and accessories in Abuja.",
+    role: "Phone, Laptop Gadgets & Repair Platform",
+    whatIDid: [
+      "Website Design & Development",
+      "Service-Focused User Experience",
+      "AI Receptionist Integration",
+      "Mobile Optimization",
+      "Booking & Inquiry Flow",
+      "Brand Experience Design"
+    ],
+    resultText: "Built to help customers easily explore phone and laptop gadgets, request repairs, book premium services, and connect with the business faster online.",
+    mockup: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
+    caseStudyLink: "https://kroxxglobalconcept.pages.dev"
   }
 ];
 
@@ -52,10 +77,10 @@ export function SelectedWork() {
           className="mb-16 text-left"
         >
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl lg:mx-0">A showcase of high-end business platforms focused on growth and conversion.</p>
+          <p className="text-soft-white/60 text-lg max-w-2xl lg:mx-0">A collection of AI-powered websites and digital systems designed to help businesses grow, convert, and scale online.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -79,11 +104,29 @@ export function SelectedWork() {
                 </div>
 
                 {/* Description below */}
-                <p className="text-soft-white/70 text-sm leading-relaxed mb-8 flex-1">{project.description}</p>
+                <p className="text-soft-white/90 text-sm leading-relaxed mb-8">{project.description}</p>
                 
-                <div className="pt-5 border-t border-white/5 flex items-center justify-between mt-auto">
-                  <span className="text-xs font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover:text-brand-orange transition-colors">View Case Study</span>
-                  <ExternalLink className="w-4 h-4 text-soft-white/40 group-hover:text-brand-orange transition-colors" />
+                <div className="w-full text-left mb-8 flex-1">
+                  <h4 className="font-display uppercase text-xs tracking-widest text-brand-orange mb-4 font-bold border-b border-white/5 pb-2">What I Did</h4>
+                  <ul className="space-y-2">
+                    {project.whatIDid.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-soft-white/70">
+                        <CheckCircle2 className="w-4 h-4 text-brand-orange/80 shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="w-full bg-[#0B0B0D] p-4 rounded-lg border border-white/5 mb-6 relative hover:border-white/10 transition-colors text-left object-bottom mt-auto">
+                    <p className="text-sm font-light text-soft-white/80"><span className="font-semibold text-white">Result:</span> {project.resultText}</p>
+                </div>
+                
+                <div className="w-full pt-4 border-t border-white/5 flex items-center justify-between">
+                  <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-full justify-between">
+                    <span className="text-xs font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
+                    <ExternalLink className="w-4 h-4 text-soft-white/40 group-hover/link:text-brand-orange transition-colors" />
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -115,7 +158,7 @@ export function SelectedWork() {
             className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap"
           >
             <Code className="w-4 h-4" />
-            Access Node
+            Explore Projects
           </a>
         </motion.div>
       </div>

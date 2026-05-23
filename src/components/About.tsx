@@ -27,28 +27,35 @@ export function About() {
               </div>
             </div>
             <div>
-              <div className="inline-block px-2 py-0.5 bg-brand-orange/20 border border-brand-orange/50 text-brand-orange text-[10px] font-display uppercase tracking-widest rounded-sm mb-2 shadow-[0_0_10px_rgba(255,90,54,0.2)]">Growth Architect</div>
+              <div className="inline-block px-2 py-0.5 bg-brand-orange/20 border border-brand-orange/50 text-brand-orange text-[10px] font-display uppercase tracking-widest rounded-sm mb-2 shadow-[0_0_10px_rgba(255,90,54,0.2)]">AI Growth Systems Designer</div>
               <h3 className="font-display text-2xl font-bold">Digital Chukwudi</h3>
             </div>
           </div>
           
-          <div className="space-y-4 text-soft-white/70 text-base leading-relaxed mb-8 relative z-10 font-light file:">
+          <div className="space-y-4 text-soft-white/70 text-base leading-relaxed mb-8 relative z-10 font-light">
             <p>
-              I bridge the gap between cutting-edge AI technologies and high-converting frontend experiences.
+              I help businesses grow through AI-powered websites, intelligent automation, AI chat agents, cinematic AI content, digital sales systems and all round modern content experiences.
             </p>
             <p>
-              For businesses to thrive today, they don't just need a website—they need a <span className="text-white font-medium border-b border-brand-orange/50">digital system</span>. From intelligent booking flows and automated CRM pipelines to generative AI content, I build infrastructure that scales revenue.
+              Today, businesses need more than just a good-looking website — they need systems that attract attention, engage visitors, and convert traffic into paying customers.
+            </p>
+            <p>
+              From high-converting websites and AI-powered chat experiences to paid ads and digital funnels, I build digital growth systems designed for modern businesses that want to scale online.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/5 relative z-10">
+          <div className="grid grid-cols-3 gap-4 pt-8 border-t border-white/5 relative z-10">
             <div>
-              <div className="text-2xl font-display font-bold text-brand-orange drop-shadow-[0_0_8px_rgba(255,90,54,0.3)] mb-1">10+</div>
-              <div className="text-xs uppercase tracking-wider font-display text-soft-white/40">Entities Built</div>
+              <div className="text-xl sm:text-2xl font-display font-bold text-brand-orange drop-shadow-[0_0_8px_rgba(255,90,54,0.3)] mb-1">15+</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-wider font-display text-soft-white/40">Projects Built</div>
             </div>
             <div>
-              <div className="text-2xl font-display font-bold text-brand-orange drop-shadow-[0_0_8px_rgba(255,90,54,0.3)] mb-1">100%</div>
-              <div className="text-xs uppercase tracking-wider font-display text-soft-white/40">Performance Focus</div>
+              <div className="text-xl sm:text-2xl font-display font-bold text-brand-orange drop-shadow-[0_0_8px_rgba(255,90,54,0.3)] mb-1">Multi-Industry</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-wider font-display text-soft-white/40">Experience</div>
+            </div>
+            <div>
+              <div className="text-xl sm:text-2xl font-display font-bold text-brand-orange drop-shadow-[0_0_8px_rgba(255,90,54,0.3)] mb-1">Built For</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-wider font-display text-soft-white/40">Conversions</div>
             </div>
           </div>
         </motion.div>
@@ -66,8 +73,8 @@ export function About() {
             <span className="text-xs font-display tracking-widest text-brand-orange uppercase">Link Established</span>
           </div>
 
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Initiate Contact Sequence.</h2>
-          <p className="text-soft-white/70 leading-relaxed font-light mb-10 max-w-md">Integrate a revenue-focused digital framework into your current operations.</p>
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-6">Let’s Build a Digital System That Grows Your Business.</h2>
+          <p className="text-soft-white/70 leading-relaxed font-light mb-10 max-w-md">Whether you need a high-converting website, AI chat agent, paid ads, AI video content, or a complete digital sales system — I can help you build a smarter online presence.</p>
           
           <div className="flex flex-col w-full gap-4">
              <a 
@@ -76,7 +83,7 @@ export function About() {
             >
               <div className="flex items-center gap-4">
                  <Mail className="w-5 h-5 text-soft-white/50 group-hover:text-brand-orange transition-colors" />
-                 <span className="font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">Direct Comm_Line</span>
+                 <span className="font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">Direct Email_Line</span>
               </div>
               <ExternalLink className="w-4 h-4 text-soft-white/30 group-hover:text-brand-orange transition-colors" />
             </a>
@@ -89,7 +96,7 @@ export function About() {
             >
               <div className="flex items-center gap-4">
                  <Calendar className="w-5 h-5 text-white" />
-                 <span className="font-display uppercase tracking-widest text-sm font-bold text-white">Schedule Uplink (Cal.com)</span>
+                 <span className="font-display uppercase tracking-widest text-sm font-bold text-white">Schedule a Call (Cal.com)</span>
               </div>
               <ExternalLink className="w-4 h-4 text-white/50" />
             </a>
@@ -102,7 +109,7 @@ export function About() {
             >
               <div className="flex items-center gap-4">
                  <MessageCircle className="w-5 h-5 text-soft-white/50 group-hover:text-[#25D366] transition-colors" />
-                 <span className="font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">WhatsApp Network</span>
+                 <span className="font-display uppercase tracking-widest text-sm font-bold group-hover:text-white transition-colors">WhatsApp Line</span>
               </div>
               <ExternalLink className="w-4 h-4 text-soft-white/30 group-hover:text-[#25D366] transition-colors" />
             </a>

@@ -6,6 +6,7 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
+import { HowIHelp } from './components/HowIHelp';
 import { SelectedWork } from './components/SelectedWork';
 import { Toolstack } from './components/Toolstack';
 import { About } from './components/About';
@@ -19,6 +20,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
+        <HowIHelp />
         <SelectedWork />
         <Testimonials />
         <Toolstack />
@@ -28,7 +30,7 @@ export default function App() {
       <ScrollToTop />
       
       <footer className="w-full text-center text-xs font-display py-8 bg-[#050505] text-soft-white/30 uppercase tracking-widest border-t border-white/5 relative z-10">
-        &copy; {new Date().getFullYear()} Digital Chukwudi. Systems Online. All rights reserved.
+        &copy; 2026 Digital Chukwudi. All Rights Reserved.
       </footer>
     </div>
   );
