@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { ExternalLink, Github, Code, CheckCircle2 } from 'lucide-react';
 import ReactPlayer from 'react-player';
 
+const Player = ReactPlayer as any;
+
 const projects = [
   {
     title: "Verve Dental",
@@ -76,8 +78,8 @@ const projects = [
       "AI-Assisted Production"
     ],
     resultText: "Created a visually immersive AI-powered cinematic experience designed to increase engagement and elevate premium brand perception online.",
-    videoUrl: "https://www.youtube.com/watch?v=NW9a-Z8w4vs",
-    caseStudyLink: "https://www.youtube.com/watch?v=NW9a-Z8w4vs"
+    videoUrl: "https://youtu.be/NW9a-Z8w4vs",
+    caseStudyLink: "https://youtu.be/NW9a-Z8w4vs"
   },
   {
     title: "AI Commercial Video",
@@ -91,8 +93,8 @@ const projects = [
       "Brand-Focused Storytelling"
     ],
     resultText: "Produced a modern AI-powered commercial designed to attract attention, strengthen brand identity, and improve customer engagement online.",
-    videoUrl: "https://youtube.com/shorts/6VKfMY08fTU",
-    caseStudyLink: "https://youtube.com/shorts/6VKfMY08fTU"
+    videoUrl: "https://youtube.com/shorts/6VKfMY08fTU?feature=share",
+    caseStudyLink: "https://youtube.com/shorts/6VKfMY08fTU?feature=share"
   }
 ];
 
@@ -133,12 +135,12 @@ export function SelectedWork() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111114] to-transparent opacity-50 z-10 pointer-events-none" />
                   {project.videoUrl ? (
                     <div className="w-full h-full relative z-20">
-                      <ReactPlayer
+                      <Player
                         url={project.videoUrl}
                         width="100%"
                         height="100%"
-                        light={true}
                         controls={true}
+                        light={true}
                         playing={true}
                         style={{ position: 'absolute', top: 0, left: 0 }}
                       />

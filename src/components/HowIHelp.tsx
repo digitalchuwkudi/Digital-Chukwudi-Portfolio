@@ -5,17 +5,17 @@ const steps = [
   {
     title: "Attract",
     description: "AI videos, paid ads, and modern websites designed to help brands stand out and capture attention online.",
-    icon: <Magnet className="w-10 h-10 text-brand-orange mb-6" />
+    icon: <Magnet className="w-10 h-10 text-brand-orange" />
   },
   {
     title: "Engage",
     description: "AI receptionist agents and intelligent user experiences that keep visitors engaged, informed, and connected to your business.",
-    icon: <Users className="w-10 h-10 text-brand-orange mb-6" />
+    icon: <Users className="w-10 h-10 text-brand-orange" />
   },
   {
     title: "Convert",
     description: "Funnels, booking systems, and automated digital workflows designed to turn visitors into paying customers.",
-    icon: <RefreshCcw className="w-10 h-10 text-brand-orange mb-6" />
+    icon: <RefreshCcw className="w-10 h-10 text-brand-orange" />
   }
 ];
 
@@ -44,10 +44,10 @@ export function HowIHelp() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative overflow-hidden rounded-xl bg-[#111114] border border-white/10 p-10 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group text-center flex flex-col items-center"
+              className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 sm:p-10 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group text-center flex flex-col items-center"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-              <div className="group-hover:scale-110 transition-transform duration-500">
+              <div className="mb-6 group-hover:scale-110 transition-transform duration-500">
                 {step.icon}
               </div>
               <h3 className="font-display text-2xl font-bold mb-4">{step.title}</h3>

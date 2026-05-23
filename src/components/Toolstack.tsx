@@ -16,19 +16,13 @@ export function Toolstack() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNykiLz48L3N2Zz4=')] opacity-50" />
       
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="lg:w-1/3 text-left flex flex-col items-start"
-        >
+        <div className="lg:w-1/3 text-left flex flex-col items-start">
           <div className="p-3 bg-[#111] rounded-lg border border-white/10 mb-4 shadow-[0_0_15px_rgba(255,255,255,0.03)] inline-block">
              <Settings2 className="w-6 h-6 text-soft-white/60" />
           </div>
           <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-tight">Tools & Platforms</h2>
           <p className="text-soft-white/60 font-light max-w-sm">AI and creative tools powering modern digital experiences, automation systems, and growth-focused workflows.</p>
-        </motion.div>
+        </div>
 
         <div className="lg:w-2/3 flex flex-wrap justify-center lg:justify-end gap-6 sm:gap-8">
           {tools.map((tool, i) => (
