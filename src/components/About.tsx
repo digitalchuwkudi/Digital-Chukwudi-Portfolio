@@ -1,9 +1,66 @@
 import { motion } from 'motion/react';
-import { Mail, MessageCircle, Calendar, ExternalLink } from 'lucide-react';
+import { Mail, MessageCircle, Calendar, ExternalLink, Twitter, Instagram, Facebook, Linkedin, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export function About() {
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  useEffect(() => {
+    if (showCalendar) {
+      (function (C: any, A: any, L: any) {
+        let p = function (a: any, ar: any) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal; let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {}; cal.q = cal.q || [];
+            let scr = d.createElement("script");
+            scr.src = A;
+            d.head.appendChild(scr);
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () { p(api, arguments); };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      (window as any).Cal("init", "30min", { origin: "https://app.cal.com" });
+
+      (window as any).Cal.ns["30min"]("inline", {
+        elementOrSelector: "#my-cal-inline-30min",
+        config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
+        calLink: "digitalchukwudi/30min",
+      });
+
+      (window as any).Cal.ns["30min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    }
+  }, [showCalendar]);
+
   return (
     <section className="py-24 px-6 sm:px-12 lg:px-24 relative overflow-hidden" id="about">
+      {showCalendar && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-8">
+          <div className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(255,90,54,0.2)]">
+            <button 
+              onClick={() => setShowCalendar(false)}
+              className="absolute top-4 right-4 z-10 p-2 bg-black/10 hover:bg-black/20 rounded-full transition-colors"
+            >
+              <X className="w-6 h-6 text-black" />
+            </button>
+            <div style={{ width: '100%', height: '100%', overflow: 'scroll' }} id="my-cal-inline-30min"></div>
+          </div>
+        </div>
+      )}
        <div className="absolute right-0 bottom-0 w-3/4 h-3/4 bg-brand-orange/5 rounded-full blur-[150px] pointer-events-none" />
        
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
@@ -79,31 +136,50 @@ export function About() {
           <div className="flex flex-col items-center w-full gap-4">
             <a 
               href="mailto:digitalchukwudi@gmail.com" 
-              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[300px] sm:w-[340px] h-[56px] px-4 bg-[#111114] border border-white/10 hover:border-brand-orange hover:bg-brand-orange/5 rounded-xl transition-all group"
+              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[320px] sm:w-[400px] h-[56px] px-4 bg-[#111114] border border-white/10 hover:border-brand-orange hover:bg-brand-orange/5 rounded-xl transition-all group"
             >
                <Mail className="w-5 h-5 shrink-0 text-soft-white/50 group-hover:text-brand-orange transition-colors" />
                <span className="font-display uppercase tracking-widest text-[11px] sm:text-sm font-bold group-hover:text-white transition-colors truncate">digitalchukwudi@gmail.com</span>
             </a>
             
-            <a 
-              href="https://cal.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[300px] sm:w-[340px] h-[56px] px-4 bg-brand-orange hover:bg-brand-orange/90 shadow-[0_0_20px_rgba(255,90,54,0.2)] hover:shadow-[0_0_30px_rgba(255,90,54,0.4)] rounded-xl transition-all group"
+            <button 
+              onClick={() => setShowCalendar(true)}
+              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[320px] sm:w-[400px] h-[56px] px-4 bg-brand-orange hover:bg-brand-orange/90 shadow-[0_0_20px_rgba(255,90,54,0.2)] hover:shadow-[0_0_30px_rgba(255,90,54,0.4)] rounded-xl transition-all group"
             >
                <Calendar className="w-5 h-5 shrink-0 text-white" />
                <span className="font-display uppercase tracking-widest text-[11px] sm:text-sm font-bold text-white truncate">Schedule a Call</span>
-            </a>
+            </button>
 
             <a 
               href="https://wa.me/2290192206612" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[300px] sm:w-[340px] h-[56px] px-4 bg-[#111114] border border-white/10 hover:border-[#25D366] hover:bg-[#25D366]/5 rounded-xl transition-all group"
+              className="flex flex-row items-center justify-center gap-3 sm:gap-4 w-[320px] sm:w-[400px] h-[56px] px-4 bg-[#111114] border border-white/10 hover:border-[#25D366] hover:bg-[#25D366]/5 rounded-xl transition-all group"
             >
                <MessageCircle className="w-5 h-5 shrink-0 text-soft-white/50 group-hover:text-[#25D366] transition-colors" />
                <span className="font-display uppercase tracking-widest text-[11px] sm:text-sm font-bold group-hover:text-white transition-colors truncate">WhatsApp Line</span>
             </a>
+
+            {/* Social Icons */}
+            <div className="flex items-center justify-center gap-5 sm:gap-6 mt-4 w-full">
+              <a href="https://x.com/digitalCHUKWUDI" target="_blank" rel="noopener noreferrer" className="p-3 bg-black border border-[#1DA1F2]/20 hover:border-[#1DA1F2] rounded-full transition-all group hover:bg-[#1DA1F2]/5 hover:shadow-[0_0_15px_rgba(29,161,242,0.2)] shadow-[0_0_10px_rgba(29,161,242,0.1)]" aria-label="Twitter">
+                <Twitter className="w-5 h-5 text-[#1DA1F2] group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://www.linkedin.com/in/digital-chukwudi-46a329388/" target="_blank" rel="noopener noreferrer" className="p-3 bg-black border border-[#0A66C2]/20 hover:border-[#0A66C2] rounded-full transition-all group hover:bg-[#0A66C2]/5 hover:shadow-[0_0_15px_rgba(10,102,194,0.2)] shadow-[0_0_10px_rgba(10,102,194,0.1)]" aria-label="LinkedIn">
+                <Linkedin className="w-5 h-5 text-[#0A66C2] group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://www.instagram.com/digitalchukwudi_/" target="_blank" rel="noopener noreferrer" className="p-3 bg-black border border-[#E1306C]/20 hover:border-[#E1306C] rounded-full transition-all group hover:bg-[#E1306C]/5 hover:shadow-[0_0_15px_rgba(225,48,108,0.2)] shadow-[0_0_10px_rgba(225,48,108,0.1)]" aria-label="Instagram">
+                <Instagram className="w-5 h-5 text-[#E1306C] group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://www.tiktok.com/@digitalchukwudi" target="_blank" rel="noopener noreferrer" className="p-3 bg-black border border-white/20 hover:border-white rounded-full transition-all group hover:bg-white/5 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] shadow-[0_0_10px_rgba(255,255,255,0.1)]" aria-label="TikTok">
+                <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.8-5.46-.4-2.51.49-5.18 2.29-6.95 2.15-2.02 5.3-2.61 8.01-1.57.07 1.25.04 2.51.05 3.76-1.28-.59-2.8-.62-4.08-.1-1.34.56-2.28 1.83-2.4 3.28-.15 1.54.61 3.1 1.92 3.91 1.48.88 3.51.79 4.88-.34 1.17-.98 1.78-2.49 1.78-4.01-.02-6.52-.01-13.04-.01-19.56z" />
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61571749389768" target="_blank" rel="noopener noreferrer" className="p-3 bg-black border border-[#1877F2]/20 hover:border-[#1877F2] rounded-full transition-all group hover:bg-[#1877F2]/5 hover:shadow-[0_0_15px_rgba(24,119,242,0.2)] shadow-[0_0_10px_rgba(24,119,242,0.1)]" aria-label="Facebook">
+                <Facebook className="w-5 h-5 text-[#1877F2] group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

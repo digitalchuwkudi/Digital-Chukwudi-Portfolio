@@ -7,7 +7,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > window.innerHeight * 0.8);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -73,7 +73,7 @@ export function Navbar() {
              <a 
                href="#connect" 
                onClick={() => setIsOpen(false)}
-               className="mt-2 flex items-center justify-center gap-4 w-[300px] sm:w-[340px] h-[56px] px-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white rounded-xl transition-all"
+               className="mt-2 flex items-center justify-center gap-4 w-[320px] sm:w-[400px] h-[56px] px-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white rounded-xl transition-all"
              >
                <span className="font-display uppercase tracking-widest text-[11px] sm:text-sm font-bold transition-colors truncate">Contact</span>
              </a>
