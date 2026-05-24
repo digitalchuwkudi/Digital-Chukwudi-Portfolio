@@ -30,10 +30,10 @@ export function HowIHelp() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-left"
+          className="mb-16 text-center sm:text-left"
         >
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">How I Help Businesses Grow</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Every system is built around one goal — helping businesses attract attention, engage visitors, and convert more customers online.</p>
+          <h2 className="font-display text-[24px] sm:text-[28px] lg:text-4xl font-bold tracking-tight mb-4 uppercase">How I Help Businesses Grow</h2>
+          <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg max-w-2xl font-light mx-auto sm:mx-0">Every system is built around one goal — helping businesses attract attention, engage visitors, and convert more customers online.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -50,8 +50,8 @@ export function HowIHelp() {
               <div className="mb-6 group-hover:scale-110 transition-transform duration-500">
                 {step.icon}
               </div>
-              <h3 className="font-display text-2xl font-bold mb-4">{step.title}</h3>
-              <p className="text-soft-white/70 leading-relaxed font-light">{step.description}</p>
+              <h3 className="font-display text-[20px] sm:text-[22px] lg:text-2xl font-bold mb-4">{step.title}</h3>
+              <p className="text-[14px] sm:text-[15px] lg:text-base text-soft-white/70 leading-relaxed font-light">{step.description}</p>
             </motion.div>
           ))}
         </div>

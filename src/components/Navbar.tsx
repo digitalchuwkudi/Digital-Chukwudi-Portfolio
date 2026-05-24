@@ -7,7 +7,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleScroll = () => setIsScrolled(window.scrollY > window.innerHeight * 0.8);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,13 +22,13 @@ export function Navbar() {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-black/90 backdrop-blur-md border-white/5 py-3' : 'bg-transparent border-transparent py-4'}`}>
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
-        <a href="#" className="flex items-center gap-2 group -my-14 -ml-6 md:-ml-12 relative z-20 justify-self-start">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 lg:grid-cols-[1fr_auto_1fr] items-center">
+        <a href="#" className="flex-1 flex items-center gap-2 group -my-14 -ml-6 md:-ml-12 relative z-20 justify-start">
           <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[240px] h-[170px] object-contain" />
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center justify-center gap-8 w-full">
+        <nav className="hidden lg:flex flex-none items-center justify-center gap-8 w-auto">
           {links.map((link) => (
             <a key={link.name} href={link.href} className="text-xs font-display uppercase tracking-widest font-semibold text-soft-white/60 hover:text-white hover:text-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all whitespace-nowrap">
               {link.name}
@@ -36,27 +36,29 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:flex justify-end">
+        <div className="hidden lg:flex flex-1 justify-end">
           <a href="#connect" className="flex items-center justify-center gap-2 px-6 py-4 bg-brand-orange/10 hover:bg-white text-brand-orange hover:text-black hover:border-white border border-brand-orange/30 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all whitespace-nowrap">
             <ArrowRight className="w-4 h-4" />
             Contact
           </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden justify-self-end text-white hover:text-brand-orange transition-colors" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
-        </button>
+        {/* Mobile/Tablet Toggle */}
+        <div className="flex flex-1 justify-end lg:hidden">
+          <button className="text-white hover:text-brand-orange transition-colors" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-[#0B0B0D] border-b border-brand-orange/30 flex flex-col items-center py-6 gap-6 md:hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+            className="absolute top-full left-0 w-full bg-[#0B0B0D] border-b border-brand-orange/30 flex flex-col items-center py-6 gap-6 lg:hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
           >
             {links.map((link) => (
               <a 
@@ -71,10 +73,9 @@ export function Navbar() {
              <a 
                href="#connect" 
                onClick={() => setIsOpen(false)}
-               className="mt-2 flex items-center justify-center gap-2 px-6 py-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all"
+               className="mt-2 flex items-center justify-center gap-4 w-[300px] sm:w-[340px] h-[56px] px-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white rounded-xl transition-all"
              >
-               <ArrowRight className="w-4 h-4" />
-               Contact
+               <span className="font-display uppercase tracking-widest text-[11px] sm:text-sm font-bold transition-colors truncate">Contact</span>
              </a>
           </motion.div>
         )}

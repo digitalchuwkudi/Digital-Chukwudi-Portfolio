@@ -32,7 +32,7 @@ const projects = [
       "Brand Experience Design"
     ],
     resultText: "Created a smoother customer journey that helps convert visitors into booked beauty appointments.",
-    mockup: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=600&auto=format&fit=crop",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779568386/Mockup_Website_for_LASH_cuf7rz.mp4",
     caseStudyLink: "https://lash-and-brows-near-you.pages.dev"
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       "Conversion Funnel"
     ],
     resultText: "Built to automate patient engagement and help clinics convert more website visitors into qualified leads.",
-    mockup: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779568273/final_mockup_for_dentist_leads_hq6poy.mp4",
     caseStudyLink: "https://dentistleads.pages.dev"
   },
   {
@@ -78,8 +78,8 @@ const projects = [
       "AI-Assisted Production"
     ],
     resultText: "Created a visually immersive AI-powered cinematic experience designed to increase engagement and elevate premium brand perception online.",
-    videoUrl: "https://youtu.be/NW9a-Z8w4vs",
-    caseStudyLink: "https://youtu.be/NW9a-Z8w4vs"
+    videoUrl: "https://www.youtube.com/watch?v=NW9a-Z8w4vs",
+    caseStudyLink: "https://www.youtube.com/watch?v=NW9a-Z8w4vs"
   },
   {
     title: "AI Commercial Video",
@@ -93,8 +93,8 @@ const projects = [
       "Brand-Focused Storytelling"
     ],
     resultText: "Produced a modern AI-powered commercial designed to attract attention, strengthen brand identity, and improve customer engagement online.",
-    videoUrl: "https://youtube.com/shorts/6VKfMY08fTU?feature=share",
-    caseStudyLink: "https://youtube.com/shorts/6VKfMY08fTU?feature=share"
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779570605/KROXX_Global_Concept_ad_mgjoxe.mp4",
+    caseStudyLink: "https://www.youtube.com/shorts/6VKfMY08fTU"
   }
 ];
 
@@ -107,10 +107,10 @@ export function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-left"
+          className="mb-16 text-center sm:text-left"
         >
-          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl lg:mx-0">A collection of AI-powered websites and digital systems designed to help businesses grow, convert, and scale online.</p>
+          <h2 className="font-display text-[24px] sm:text-[28px] lg:text-4xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
+          <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg max-w-2xl mx-auto sm:mx-0">A collection of AI-powered websites and digital systems designed to help businesses grow, convert, and scale online.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -125,25 +125,37 @@ export function SelectedWork() {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-brand-orange/10 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
-              <div className="relative z-10 flex flex-col h-full items-center text-center">
+              <div className="relative z-10 flex flex-col h-full items-start text-left w-full">
                 {/* Heading on Top */}
-                <h3 className="font-display text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-soft-white/40 font-mono text-xs uppercase tracking-widest mb-6">{project.role}</p>
+                <div className="w-full text-center">
+                  <h3 className="font-display text-[20px] sm:text-[22px] lg:text-2xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-soft-white/40 font-mono text-[10px] sm:text-[11px] lg:text-xs uppercase tracking-widest mb-6">{project.role}</p>
+                </div>
 
                 {/* Mockup Container */}
                 <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-black border border-white/5 mb-6 relative shadow-lg group-hover:border-brand-orange/30 transition-colors">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111114] to-transparent opacity-50 z-10 pointer-events-none" />
                   {project.videoUrl ? (
                     <div className="w-full h-full relative z-20">
-                      <Player
-                        url={project.videoUrl}
-                        width="100%"
-                        height="100%"
-                        controls={true}
-                        light={true}
-                        playing={true}
-                        style={{ position: 'absolute', top: 0, left: 0 }}
-                      />
+                      {project.videoUrl.includes('.mp4') ? (
+                         <video 
+                           autoPlay 
+                           loop 
+                           muted 
+                           playsInline 
+                           preload="auto"
+                           className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105"
+                           src={project.videoUrl}
+                         />
+                      ) : (
+                        <Player
+                          url={project.videoUrl}
+                          width="100%"
+                          height="100%"
+                          controls={true}
+                          style={{ position: 'absolute', top: 0, left: 0 }}
+                        />
+                      )}
                     </div>
                   ) : (
                     <img src={project.mockup} alt={project.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105" />
@@ -151,13 +163,13 @@ export function SelectedWork() {
                 </div>
 
                 {/* Description below */}
-                <p className="text-soft-white/90 text-sm leading-relaxed mb-8">{project.description}</p>
+                <p className="text-soft-white/90 text-[14px] sm:text-[15px] lg:text-sm leading-relaxed mb-8">{project.description}</p>
                 
                 <div className="w-full text-left mb-8 flex-1">
-                  <h4 className="font-display uppercase text-xs tracking-widest text-brand-orange mb-4 font-bold border-b border-white/5 pb-2">What I Did</h4>
+                  <h4 className="font-display uppercase text-[11px] sm:text-[12px] lg:text-xs tracking-widest text-brand-orange mb-4 font-bold border-b border-white/5 pb-2">What I Did</h4>
                   <ul className="space-y-2">
                     {project.whatIDid.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-soft-white/70">
+                      <li key={i} className="flex items-start gap-2 text-[13px] sm:text-[14px] lg:text-sm text-soft-white/70">
                         <CheckCircle2 className="w-4 h-4 text-brand-orange/80 shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
@@ -166,12 +178,12 @@ export function SelectedWork() {
                 </div>
 
                 <div className="w-full bg-[#0B0B0D] p-4 rounded-lg border border-white/5 mb-6 relative hover:border-white/10 transition-colors text-left object-bottom mt-auto">
-                    <p className="text-sm font-light text-soft-white/80"><span className="font-semibold text-white">Result:</span> {project.resultText}</p>
+                    <p className="text-[13px] sm:text-[14px] lg:text-sm font-light text-soft-white/80"><span className="font-semibold text-white">Result:</span> {project.resultText}</p>
                 </div>
                 
                 <div className="w-full pt-4 border-t border-white/5 flex items-center justify-between">
                   <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-full justify-between">
-                    <span className="text-xs font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
+                    <span className="text-[11px] sm:text-[12px] lg:text-xs font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
                     <ExternalLink className="w-4 h-4 text-soft-white/40 group-hover/link:text-brand-orange transition-colors" />
                   </a>
                 </div>
@@ -186,15 +198,15 @@ export function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-brand-orange/30 hover:shadow-[0_0_20px_rgba(255,90,54,0.1)] transition-all"
+          className="mt-8 relative overflow-hidden rounded-xl bg-black border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-end text-left sm:text-left justify-between gap-6 hover:border-brand-orange/30 hover:shadow-[0_0_20px_rgba(255,90,54,0.1)] transition-all"
         >
           <div className="flex flex-col items-start gap-4">
             <div className="p-3 bg-[#111] rounded-lg border border-white/10 shadow-[0_0_15px_rgba(255,255,255,0.03)] inline-block">
                <Github className="w-6 h-6 text-soft-white/60" />
             </div>
             <div>
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-2">Open Source Lab</h3>
-              <p className="text-soft-white/60">Explore my technical playground and algorithm configurations.</p>
+              <h3 className="font-display text-[20px] sm:text-[22px] lg:text-2xl font-bold mb-2">Open Source Lab</h3>
+              <p className="text-soft-white/60 text-[14px] sm:text-[15px] lg:text-base">Explore my technical playground and algorithm configurations.</p>
             </div>
           </div>
           
@@ -202,7 +214,7 @@ export function SelectedWork() {
             href="https://github.com/digitalchuwkudi" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center sm:justify-start gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
+            className="flex items-center justify-center sm:justify-end gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
           >
             <Code className="w-4 h-4" />
             Explore Projects

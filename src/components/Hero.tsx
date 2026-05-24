@@ -17,7 +17,7 @@ export function Hero() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover object-[center_30%] grayscale-[0.2] transform-gpu will-change-transform"
+          className="w-full h-full object-cover object-[70%_35%] lg:object-[center_30%] grayscale-[0.2] transform-gpu will-change-transform"
           src="https://res.cloudinary.com/dx41voszq/video/upload/q_auto,f_auto/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
         />
       </div>
@@ -28,13 +28,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-start gap-4 lg:gap-6 w-full lg:max-w-3xl"
+          className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 w-full lg:max-w-3xl"
         >
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
+          <h1 className="font-display text-[28px] sm:text-[36px] lg:text-5xl 2xl:text-6xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
             AI-Powered Websites & Digital Systems That Convert Visitors Into Clients.
           </h1>
           
-          <p className="text-lg sm:text-xl text-soft-white/90 font-light leading-relaxed max-w-2xl drop-shadow-sm">
+          <p className="text-[15px] sm:text-[18px] lg:text-xl text-soft-white/90 font-light leading-relaxed max-w-2xl drop-shadow-sm">
             From AI websites and AI receptionist agents to cinematic AI videos, paid ads, and digital sales systems - I help turn attention into leads and sales.
           </p>
         </motion.div>

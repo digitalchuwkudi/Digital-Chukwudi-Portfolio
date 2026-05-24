@@ -30,10 +30,10 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-left"
+          className="mb-16 text-center sm:text-left"
         >
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 uppercase">Client Testimonial</h2>
-          <p className="text-soft-white/60 text-lg max-w-2xl font-light">Real feedback from businesses using my AI-powered digital systems.</p>
+          <h2 className="font-display text-[24px] sm:text-[28px] lg:text-4xl font-bold tracking-tight mb-4 uppercase">Client Testimonial</h2>
+          <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg max-w-2xl font-light mx-auto sm:mx-0">Real feedback from businesses using my AI-powered digital systems.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -47,11 +47,11 @@ export function Testimonials() {
               className="relative rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,0,0,0.1)] group flex flex-col"
             >
               <Quote className="w-10 h-10 text-brand-orange/20 mb-6 group-hover:text-brand-orange transition-colors" />
-              <p className="text-soft-white/80 leading-relaxed font-light mb-8 flex-1">"{test.quote}"</p>
+              <p className="text-soft-white/80 text-[14px] sm:text-[15px] lg:text-base leading-relaxed font-light mb-8 flex-1">"{test.quote}"</p>
               
               <div className="pt-6 border-t border-white/5">
-                <p className="font-bold text-white font-display tracking-wider uppercase text-sm mb-1">{test.author}</p>
-                <p className="text-xs font-mono text-soft-white/40 uppercase tracking-widest">{test.role}</p>
+                <p className="font-bold text-white font-display tracking-wider uppercase text-[12px] sm:text-[13px] lg:text-sm mb-1">{test.author}</p>
+                <p className="text-[10px] sm:text-[11px] lg:text-xs font-mono text-soft-white/40 uppercase tracking-widest">{test.role}</p>
               </div>
             </motion.div>
           ))}
