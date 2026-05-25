@@ -17,8 +17,8 @@ export function Hero() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover object-[70%_35%] lg:object-[center_30%] grayscale-[0.2] transform-gpu will-change-transform"
-          src="https://res.cloudinary.com/dx41voszq/video/upload/q_auto,f_auto/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
+          className="w-full h-full object-cover object-[70%_35%] lg:object-[center_30%] transform-gpu will-change-transform"
+          src="https://res.cloudinary.com/dx41voszq/video/upload/q_auto:best,f_auto/v1779454021/Enhancer-Ultra_Hd-Portfolio1_ollvmc.mp4"
         />
       </div>
 
@@ -47,7 +47,7 @@ export function Hero() {
         >
           <a 
             href="#work" 
-            className="group flex items-center justify-center gap-2 px-6 h-[50px] bg-white text-black rounded-sm font-display text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
+            className="group flex items-center justify-center gap-2 px-6 h-[50px] bg-white text-black rounded-sm font-display text-xs sm:text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
           >
             <ArrowRight className="w-4 h-4" />
             View My Work

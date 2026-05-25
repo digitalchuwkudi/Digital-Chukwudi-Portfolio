@@ -17,7 +17,7 @@ const projects = [
       "Patient Lead Flow"
     ],
     resultText: "Built to improve patient inquiries, automate engagement, and increase appointment conversions.",
-    mockup: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779657250/mockup_for_portfolio_-_Verve_dental_m9ysn9.mp4",
     caseStudyLink: "https://vervedental.pages.dev"
   },
   {
@@ -32,7 +32,7 @@ const projects = [
       "Brand Experience Design"
     ],
     resultText: "Created a smoother customer journey that helps convert visitors into booked beauty appointments.",
-    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779568386/Mockup_Website_for_LASH_cuf7rz.mp4",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779634610/mockup_for_portfolio_-_lash_qbvet4.mp4",
     caseStudyLink: "https://lash-and-brows-near-you.pages.dev"
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       "Conversion Funnel"
     ],
     resultText: "Built to automate patient engagement and help clinics convert more website visitors into qualified leads.",
-    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779568273/final_mockup_for_dentist_leads_hq6poy.mp4",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779634233/mockup_for_portfolio_-_dentist_leads_zevhlg.mp4",
     caseStudyLink: "https://dentistleads.pages.dev"
   },
   {
@@ -63,7 +63,7 @@ const projects = [
       "Brand Experience Design"
     ],
     resultText: "Helped customers inquire about phone and laptop, gadgets, request repairs, book services, and connect with the business faster",
-    mockup: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=600&auto=format&fit=crop",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779663297/mockup_for_portfolio_-_kroxx_lrksax.mp4",
     caseStudyLink: "https://kroxxglobalconcept.pages.dev"
   },
   {
@@ -78,7 +78,7 @@ const projects = [
       "AI-Assisted Production"
     ],
     resultText: "Created a visually immersive AI-powered cinematic experience designed to increase engagement and elevate premium brand perception online.",
-    videoUrl: "https://www.youtube.com/watch?v=NW9a-Z8w4vs",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779633962/mockup_for_portfolio_-_cinematic_ai_ibwo73.mp4",
     caseStudyLink: "https://www.youtube.com/watch?v=NW9a-Z8w4vs"
   },
   {
@@ -93,7 +93,7 @@ const projects = [
       "Brand-Focused Storytelling"
     ],
     resultText: "Produced a modern AI-powered commercial designed to attract attention, strengthen brand identity, and improve customer engagement online.",
-    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779570605/KROXX_Global_Concept_ad_mgjoxe.mp4",
+    videoUrl: "https://res.cloudinary.com/dx41voszq/video/upload/v1779634489/mockup_for_portfolio_-_kroxx_ad_ntc20n.mp4",
     caseStudyLink: "https://www.youtube.com/shorts/6VKfMY08fTU"
   }
 ];
@@ -144,7 +144,7 @@ export function SelectedWork() {
                            muted 
                            playsInline 
                            preload="auto"
-                           className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105"
+                           className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform transform-gpu will-change-transform group-hover:scale-105"
                            src={project.videoUrl}
                          />
                       ) : (
@@ -183,7 +183,7 @@ export function SelectedWork() {
                 
                 <div className="w-full pt-4 border-t border-white/5 flex items-center justify-between">
                   <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-full justify-between">
-                    <span className="text-[11px] sm:text-[12px] lg:text-xs font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
+                    <span className="text-xs sm:text-sm font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
                     <ExternalLink className="w-4 h-4 text-soft-white/40 group-hover/link:text-brand-orange transition-colors" />
                   </a>
                 </div>
@@ -214,7 +214,7 @@ export function SelectedWork() {
             href="https://github.com/digitalchuwkudi" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center sm:justify-end gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
+            className="flex items-center justify-center sm:justify-end gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-xs sm:text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
           >
             <Code className="w-4 h-4" />
             Explore Projects

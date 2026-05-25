@@ -27,8 +27,8 @@ export function Toolstack() {
           {tools.map((tool) => (
              <div key={tool.name} className="group relative flex flex-col items-center gap-3 sm:gap-4">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#111114] border border-white/10 flex items-center justify-center hover:border-white/30 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] relative overflow-hidden">
-                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-40 transition-opacity duration-300`} />
-                   <span className="font-display font-black text-2xl sm:text-3xl lg:text-2xl xl:text-3xl text-white/50 group-hover:text-white transition-colors drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">{tool.initial}</span>
+                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-80 group-hover:opacity-100 transition-opacity duration-300`} />
+                   <span className="font-display font-black text-2xl sm:text-3xl lg:text-2xl xl:text-3xl text-white group-hover:scale-110 transition-transform drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">{tool.initial}</span>
                    
                    <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/40 m-1" />
                    <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/40 m-1" />
