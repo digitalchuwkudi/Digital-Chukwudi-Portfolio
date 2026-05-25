@@ -40,7 +40,7 @@ export function Hero() {
         >
           <a 
             href="#work" 
-            className="group flex items-center justify-center gap-2 px-6 h-[50px] bg-white text-black rounded-sm font-display text-xs sm:text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
+            className="group flex items-center justify-center gap-2 px-6 h-[50px] bg-white text-black rounded-sm font-display text-[11px] sm:text-[13px] md:text-sm uppercase tracking-widest font-bold transition-all hover:bg-brand-orange hover:text-white hover:scale-[1.02] active:scale-95 w-full sm:w-auto shadow-2xl"
           >
             <ArrowRight className="w-4 h-4" />
             View My Work

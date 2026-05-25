@@ -174,7 +174,7 @@ export function SelectedWork() {
                 
                 <div className="w-full pt-4 border-t border-white/5 flex items-center justify-between">
                   <a href={project.caseStudyLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group/link w-full justify-between">
-                    <span className="text-xs sm:text-sm font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
+                    <span className="text-[11px] sm:text-[13px] md:text-sm font-display tracking-widest text-soft-white/40 uppercase font-semibold group-hover/link:text-brand-orange transition-colors">View Case Study</span>
                     <ExternalLink className="w-4 h-4 text-soft-white/40 group-hover/link:text-brand-orange transition-colors" />
                   </a>
                 </div>
@@ -201,7 +201,7 @@ export function SelectedWork() {
             href="https://github.com/digitalchuwkudi" 
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center sm:justify-end gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-xs sm:text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
+            className="flex items-center justify-center sm:justify-end gap-2 px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg font-display text-[11px] sm:text-[13px] md:text-sm uppercase tracking-widest hover:border-brand-orange hover:text-brand-orange transition-all whitespace-nowrap w-full sm:w-auto mt-4 sm:mt-0"
           >
             <Code className="w-4 h-4" />
             Explore Projects

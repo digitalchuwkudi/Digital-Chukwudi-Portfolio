@@ -36,7 +36,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex flex-1 justify-end">
-          <a href="#connect" className="flex items-center justify-center gap-2 px-6 py-4 bg-brand-orange/10 hover:bg-white text-brand-orange hover:text-black hover:border-white border border-brand-orange/30 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-xs sm:text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all whitespace-nowrap">
+          <a href="#connect" className="flex items-center justify-center gap-2 px-6 py-4 bg-brand-orange/10 hover:bg-white text-brand-orange hover:text-black hover:border-white border border-brand-orange/30 shadow-[0_0_10px_rgba(255,90,54,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] text-[11px] sm:text-[13px] md:text-sm font-display uppercase tracking-widest font-bold rounded-xl transition-all whitespace-nowrap">
             <ArrowRight className="w-4 h-4" />
             Contact
           </a>
@@ -69,9 +69,9 @@ export function Navbar() {
              <a 
                href="#connect" 
                onClick={() => setIsOpen(false)}
-               className="mt-2 flex items-center justify-center gap-4 w-[95%] max-w-[340px] sm:max-w-[400px] h-[56px] px-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white rounded-xl transition-all mx-auto"
+               className="mt-2 flex items-center justify-center gap-4 w-[95%] max-w-full sm:max-w-[400px] h-[56px] px-2 sm:px-4 border border-brand-orange/30 bg-brand-orange/10 text-brand-orange hover:bg-white hover:text-black hover:border-white rounded-xl transition-all mx-auto"
              >
-               <span className="font-display uppercase tracking-widest text-xs sm:text-sm font-bold transition-colors truncate">Contact</span>
+               <span className="font-display uppercase tracking-widest text-[11px] sm:text-[13px] md:text-sm font-bold transition-colors">Contact</span>
              </a>
           </div>
         )}
