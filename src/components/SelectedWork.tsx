@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { ExternalLink, Github, Code, CheckCircle2 } from 'lucide-react';
 import ReactPlayer from 'react-player';
 
@@ -102,25 +101,17 @@ export function SelectedWork() {
   return (
     <section id="work" className="py-24 px-6 sm:px-12 lg:px-24 border-y border-white/5 bg-gradient-to-b from-black to-[#0B0B0D]">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="mb-16 text-center sm:text-left"
         >
           <h2 className="font-display text-[24px] sm:text-[28px] lg:text-4xl font-bold tracking-tight mb-4 uppercase">Selected Work</h2>
           <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg max-w-2xl mx-auto sm:mx-0">A collection of AI-powered websites and digital systems designed to help businesses grow, convert, and scale online.</p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-xl bg-[#111114] border border-white/10 p-6 sm:p-8 hover:border-brand-orange/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.15)] flex flex-col"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-brand-orange/10 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -158,7 +149,7 @@ export function SelectedWork() {
                       )}
                     </div>
                   ) : (
-                    <img src={project.mockup} alt={project.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105" />
+                    <img src={(project as any).mockup} alt={project.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105" />
                   )}
                 </div>
 
@@ -188,16 +179,12 @@ export function SelectedWork() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* GitHub Highlight */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="mt-8 relative overflow-hidden rounded-xl bg-black border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-end text-left sm:text-left justify-between gap-6 hover:border-brand-orange/30 hover:shadow-[0_0_20px_rgba(255,90,54,0.1)] transition-all"
         >
           <div className="flex flex-col items-start gap-4">
@@ -219,7 +206,7 @@ export function SelectedWork() {
             <Code className="w-4 h-4" />
             Explore Projects
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

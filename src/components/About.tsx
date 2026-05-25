@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Mail, MessageCircle, Calendar, ExternalLink, Twitter, Instagram, Facebook, Linkedin, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Cal, { getCalApi } from "@calcom/embed-react";
@@ -36,11 +35,7 @@ export function About() {
        <div className="absolute right-0 bottom-0 w-3/4 h-3/4 bg-brand-orange/5 rounded-full blur-[150px] pointer-events-none" />
        
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+        <div 
           className="w-full lg:w-1/2 p-10 rounded-2xl bg-black border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)] relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
@@ -87,14 +82,10 @@ export function About() {
               <div className="text-[10px] sm:text-[11px] lg:text-xs uppercase tracking-wider font-display text-soft-white/40">Conversions</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div 
+        <div 
           id="connect"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full lg:w-1/2 flex flex-col items-center text-center scroll-mt-24"
         >
           <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand-orange/30 bg-brand-orange/5 mb-6">
@@ -153,7 +144,7 @@ export function About() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

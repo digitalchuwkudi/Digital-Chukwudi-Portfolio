@@ -4,9 +4,11 @@ const tools = [
   { name: "Google AI Studio", initial: "G", color: "from-blue-500/80 to-blue-600/20" },
   { name: "Antigravity", initial: "A", color: "from-purple-500/80 to-purple-600/20" },
   { name: "Claude", initial: "C", color: "from-orange-400/80 to-orange-600/20" },
-  { name: "ChatGPT", initial: "O", color: "from-emerald-500/80 to-emerald-600/20" },
+  { name: "ChatGPT", initial: "C", color: "from-emerald-500/80 to-emerald-600/20" },
   { name: "Veo3", initial: "V", color: "from-cyan-400/80 to-cyan-600/20" },
-  { name: "Seedance", initial: "S", color: "from-pink-500/80 to-pink-600/20" }
+  { name: "Seedance", initial: "S", color: "from-pink-500/80 to-pink-600/20" },
+  { name: "Canva", initial: "C", color: "from-cyan-400/80 to-purple-600/20" },
+  { name: "Capcut", initial: "C", color: "from-gray-300/80 to-gray-600/20" }
 ];
 
 export function Toolstack() {
@@ -23,7 +25,7 @@ export function Toolstack() {
           <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg font-light max-w-sm lg:max-w-2xl mx-auto">AI and creative tools powering modern digital experiences, automation systems, and growth-focused workflows.</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 justify-items-center max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-4xl mx-auto">
           {tools.map((tool) => (
              <div key={tool.name} className="group relative flex flex-col items-center gap-3 sm:gap-4">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-16 lg:h-16 xl:w-20 xl:h-20 rounded-tl-xl rounded-br-xl rounded-tr-sm rounded-bl-sm bg-[#111114] border border-white/10 flex items-center justify-center hover:border-white/30 transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] relative overflow-hidden">

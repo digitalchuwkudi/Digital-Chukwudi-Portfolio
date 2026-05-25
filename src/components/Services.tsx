@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { MonitorSmartphone, LayoutTemplate, MessageSquare, Film, TrendingUp } from 'lucide-react';
 
 const services = [
@@ -35,25 +34,17 @@ export function Services() {
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="mb-16 text-center sm:text-left"
         >
           <h2 className="font-display text-[24px] sm:text-[28px] lg:text-4xl font-bold tracking-tight mb-4 uppercase">Services</h2>
           <p className="text-soft-white/60 text-[15px] sm:text-[17px] lg:text-lg max-w-2xl font-light mx-auto sm:mx-0">Modern digital systems designed to help businesses attract attention, convert visitors, and scale revenue online.</p>
-        </motion.div>
+        </div>
 
         <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative overflow-hidden rounded-xl bg-black border border-white/10 p-8 hover:border-brand-orange/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,90,54,0.1)] group flex flex-col items-center text-center w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] min-h-[300px] sm:min-h-[340px]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
@@ -64,7 +55,7 @@ export function Services() {
               
               <h3 className="font-display text-[20px] sm:text-[22px] lg:text-xl font-bold mb-3 text-white">{service.title}</h3>
               <p className="text-[14px] sm:text-[15px] lg:text-base text-soft-white/70 leading-relaxed font-light">{service.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

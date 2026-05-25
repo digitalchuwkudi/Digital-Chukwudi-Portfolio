@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 export function Navbar() {
@@ -23,7 +22,7 @@ export function Navbar() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${isScrolled ? 'bg-black/90 backdrop-blur-md border-white/5 py-3' : 'bg-transparent border-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 lg:grid-cols-[1fr_auto_1fr] items-center">
-        <a href="#" className="flex-1 flex items-center gap-2 group -my-14 -ml-6 md:-ml-12 relative z-20 justify-start">
+        <a href="#" className="flex-1 flex items-center gap-2 group -my-14 -ml-4 md:-ml-10 xl:-ml-14 relative z-20 justify-start">
           <img src="https://i.ibb.co/Q3m0cmP2/Untitled-5-removebg-preview-1.png" alt="Digital Chukwudi" className="w-[240px] h-[170px] object-contain" />
         </a>
 
@@ -52,12 +51,9 @@ export function Navbar() {
       </div>
 
       {/* Mobile/Tablet Menu */}
-      <AnimatePresence>
+      
         {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+          <div 
             className="absolute top-full left-0 w-full bg-[#0B0B0D] border-b border-brand-orange/30 flex flex-col items-center py-6 gap-6 lg:hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
           >
             {links.map((link) => (
@@ -77,9 +73,9 @@ export function Navbar() {
              >
                <span className="font-display uppercase tracking-widest text-xs sm:text-sm font-bold transition-colors truncate">Contact</span>
              </a>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </header>
   );
 }

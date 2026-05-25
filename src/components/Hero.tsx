@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
@@ -24,10 +23,7 @@ export function Hero() {
 
       {/* Main Bottom Content arranged exactly like Screenshot 2 layout */}
       <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row lg:items-end justify-between gap-10 lg:gap-16 relative z-10 mt-auto pt-[5vh] lg:pt-[10vh] pb-16 lg:pb-24">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div 
           className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4 lg:gap-6 w-full lg:max-w-3xl"
         >
           <h1 className="font-display text-[28px] sm:text-[36px] lg:text-5xl 2xl:text-6xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
@@ -37,12 +33,9 @@ export function Hero() {
           <p className="text-[15px] sm:text-[18px] lg:text-xl text-soft-white/90 font-light leading-relaxed max-w-2xl drop-shadow-sm">
             From AI websites and AI receptionist agents to cinematic AI videos, paid ads, and digital sales systems - I help turn attention into leads and sales.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+        <div 
           className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0 lg:mb-2"
         >
           <a 
@@ -52,7 +45,7 @@ export function Hero() {
             <ArrowRight className="w-4 h-4" />
             View My Work
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

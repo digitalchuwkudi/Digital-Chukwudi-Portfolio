@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { ChevronUp } from 'lucide-react';
 
 export function ScrollToTop() {
@@ -28,13 +27,9 @@ export function ScrollToTop() {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
+        <div
           className="fixed bottom-8 right-6 sm:right-8 z-50"
         >
           <button
@@ -44,8 +39,8 @@ export function ScrollToTop() {
           >
             <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300" />
           </button>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </>
   );
 }
